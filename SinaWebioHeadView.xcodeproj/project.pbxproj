@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B4876F82105AFA000F8FECB /* headImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B4876F72105AFA000F8FECB /* headImg.jpg */; };
+		4B4876FA2105B6D700F8FECB /* 个人主页背景.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B4876F92105B6D700F8FECB /* 个人主页背景.jpg */; };
 		4BF7B1692105A55B000887EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF7B1682105A55B000887EE /* AppDelegate.m */; };
 		4BF7B16C2105A55B000887EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF7B16B2105A55B000887EE /* ViewController.m */; };
 		4BF7B16F2105A55B000887EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF7B16D2105A55B000887EE /* Main.storyboard */; };
@@ -17,6 +19,7 @@
 		4BF7B18C2105A55B000887EE /* SinaWebioHeadViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF7B18B2105A55B000887EE /* SinaWebioHeadViewUITests.m */; };
 		4BF7B19C2105A731000887EE /* FirstWayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF7B19B2105A731000887EE /* FirstWayController.m */; };
 		4BF7B1A12105A7AA000887EE /* HeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF7B1A02105A7AA000887EE /* HeadView.m */; };
+		8D8CE7FCFB543D4600D96BD7 /* libPods-SinaWebioHeadView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ADDB68163414857DCD4A9E /* libPods-SinaWebioHeadView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		300907AD669F1F0D851063AC /* Pods-SinaWebioHeadView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaWebioHeadView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SinaWebioHeadView/Pods-SinaWebioHeadView.release.xcconfig"; sourceTree = "<group>"; };
+		4B4876F72105AFA000F8FECB /* headImg.jpg */ = {isa = PBXFileReference; explicitFileType = image.jpeg; path = headImg.jpg; sourceTree = "<group>"; };
+		4B4876F92105B6D700F8FECB /* 个人主页背景.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "个人主页背景.jpg"; sourceTree = "<group>"; };
 		4BF7B1642105A55B000887EE /* SinaWebioHeadView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaWebioHeadView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BF7B1672105A55B000887EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4BF7B1682105A55B000887EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -57,6 +63,8 @@
 		4BF7B19B2105A731000887EE /* FirstWayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstWayController.m; sourceTree = "<group>"; };
 		4BF7B19F2105A7AA000887EE /* HeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeadView.h; sourceTree = "<group>"; };
 		4BF7B1A02105A7AA000887EE /* HeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeadView.m; sourceTree = "<group>"; };
+		4D9B87EBB3ACDCC1BE7D1683 /* Pods-SinaWebioHeadView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaWebioHeadView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SinaWebioHeadView/Pods-SinaWebioHeadView.debug.xcconfig"; sourceTree = "<group>"; };
+		F9ADDB68163414857DCD4A9E /* libPods-SinaWebioHeadView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SinaWebioHeadView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D8CE7FCFB543D4600D96BD7 /* libPods-SinaWebioHeadView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E4070B9A00C53A059506ED9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9ADDB68163414857DCD4A9E /* libPods-SinaWebioHeadView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4BF7B15B2105A55B000887EE = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +108,8 @@
 				4BF7B17F2105A55B000887EE /* SinaWebioHeadViewTests */,
 				4BF7B18A2105A55B000887EE /* SinaWebioHeadViewUITests */,
 				4BF7B1652105A55B000887EE /* Products */,
+				FAF8F5706D3B6E954B911C7D /* Pods */,
+				3E4070B9A00C53A059506ED9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,14 +126,16 @@
 		4BF7B1662105A55B000887EE /* SinaWebioHeadView */ = {
 			isa = PBXGroup;
 			children = (
-				4BF7B19D2105A781000887EE /* HeadView */,
+				4B4876F92105B6D700F8FECB /* 个人主页背景.jpg */,
 				4BF7B1672105A55B000887EE /* AppDelegate.h */,
 				4BF7B1682105A55B000887EE /* AppDelegate.m */,
 				4BF7B16A2105A55B000887EE /* ViewController.h */,
 				4BF7B16B2105A55B000887EE /* ViewController.m */,
+				4BF7B19D2105A781000887EE /* HeadView */,
 				4BF7B1992105A70B000887EE /* FirstWay */,
 				4BF7B16D2105A55B000887EE /* Main.storyboard */,
 				4BF7B1702105A55B000887EE /* Assets.xcassets */,
+				4B4876F72105AFA000F8FECB /* headImg.jpg */,
 				4BF7B1722105A55B000887EE /* LaunchScreen.storyboard */,
 				4BF7B1752105A55B000887EE /* Info.plist */,
 				4BF7B1762105A55B000887EE /* main.m */,
@@ -158,6 +179,15 @@
 			path = HeadView;
 			sourceTree = "<group>";
 		};
+		FAF8F5706D3B6E954B911C7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D9B87EBB3ACDCC1BE7D1683 /* Pods-SinaWebioHeadView.debug.xcconfig */,
+				300907AD669F1F0D851063AC /* Pods-SinaWebioHeadView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,6 +195,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BF7B1902105A55B000887EE /* Build configuration list for PBXNativeTarget "SinaWebioHeadView" */;
 			buildPhases = (
+				90F892F0374CA5A5CF454B06 /* [CP] Check Pods Manifest.lock */,
 				4BF7B1602105A55B000887EE /* Sources */,
 				4BF7B1612105A55B000887EE /* Frameworks */,
 				4BF7B1622105A55B000887EE /* Resources */,
@@ -264,6 +295,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B4876F82105AFA000F8FECB /* headImg.jpg in Resources */,
+				4B4876FA2105B6D700F8FECB /* 个人主页背景.jpg in Resources */,
 				4BF7B1742105A55B000887EE /* LaunchScreen.storyboard in Resources */,
 				4BF7B1712105A55B000887EE /* Assets.xcassets in Resources */,
 				4BF7B16F2105A55B000887EE /* Main.storyboard in Resources */,
@@ -285,6 +318,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		90F892F0374CA5A5CF454B06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SinaWebioHeadView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4BF7B1602105A55B000887EE /* Sources */ = {
@@ -456,6 +510,7 @@
 		};
 		4BF7B1912105A55B000887EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D9B87EBB3ACDCC1BE7D1683 /* Pods-SinaWebioHeadView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,6 +525,7 @@
 		};
 		4BF7B1922105A55B000887EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 300907AD669F1F0D851063AC /* Pods-SinaWebioHeadView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

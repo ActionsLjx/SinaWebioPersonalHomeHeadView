@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "FirstWayController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSArray *list;
@@ -17,7 +17,7 @@
 
 -(NSArray *)list{
     if (_list == nil) {
-        _list = [[NSArray alloc]initWithObjects:@"通过两个ScrollView实现",@"通过设置两个相同的view 覆盖的方式实现", nil];
+        _list = [[NSArray alloc]initWithObjects:@"通过设置两个相同的view 覆盖的方式实现", nil];
     }
     return _list;
 }
@@ -27,6 +27,7 @@
         _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        [self list];
         [self.view addSubview:_tableView];
     }
     return _tableView;
@@ -46,15 +47,29 @@
     return cell;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    switch (indexPath.row) {
+        case 0:{
+            FirstWayController *firsVC =[[FirstWayController alloc]init];
+            [self.navigationController pushViewController:firsVC animated:YES];
+            }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self tableView];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+   
 }
 
 
