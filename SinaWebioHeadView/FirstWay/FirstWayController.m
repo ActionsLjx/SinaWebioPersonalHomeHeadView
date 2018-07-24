@@ -11,9 +11,10 @@
 @interface FirstWayController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSArray *list;
-
 @property(nonatomic,strong)HeadView *headView;
 @property(nonatomic,strong)UISearchBar *search;
+@property(nonatomic,strong)UISearchBar *search2;
+@property(nonatomic,assign)BOOL isSee;
 @end
 
 @implementation FirstWayController
@@ -23,10 +24,23 @@
     if (_search == nil) {
         _search = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 200, self.view.bounds.size.width, 30)];
         _search.backgroundColor = [UIColor lightGrayColor];
+        _search.text = @"啥也搜索不到";
      
     }
     return _search;
 }
+
+-(UISearchBar *)search2{
+    if (_search2 == nil) {
+        _search2 = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, 30)];
+        _search2.barTintColor = [UIColor lightGrayColor];
+        _search2.text = @"啥也搜索不到";
+        [self.view addSubview:_search2];
+        [_search2 setHidden:YES];
+    }
+    return _search2;
+}
+
 
 -(HeadView *)headView{
     if (_headView == nil) {
@@ -40,7 +54,7 @@
 
 -(UITableView *)tableView{
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 250, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
         [self list];
         [self headView];
         [self search];
@@ -84,8 +98,20 @@
 
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    NSLog(@"%f",scrollView.contentOffset.y);
-    
+    if (scrollView.contentOffset.y >  140 && _isSee == NO) {
+        [UIView animateWithDuration:0.1 animations:^{
+            self.navigationController.navigationBar.alpha = 1;
+        }];
+        [self.search2 setHidden:NO];
+        _isSee = YES;
+    }
+    if (scrollView.contentOffset.y <140 && _isSee == YES) {
+        [UIView animateWithDuration:0.1 animations:^{
+            self.navigationController.navigationBar.alpha = 0;
+        }];
+        [self.search2 setHidden:YES];
+        _isSee = NO;
+    }
     
 }
 
@@ -93,14 +119,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    [self tableView];
+    _isSee = NO;
+    [self search2];
     
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    /* 设置透明
     [self.navigationController.navigationBar setHidden:NO];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new]forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];\
+     */
+    //设置整体透明度
+    self.navigationController.navigationBar.alpha = 0;
 }
 
 @end
